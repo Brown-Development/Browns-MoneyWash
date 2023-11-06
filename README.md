@@ -2,7 +2,7 @@
 
 # If you like this script check out my tebex: https://brown-development.tebex.io/
 
-#Preview: https://youtu.be/P2aWIuwqIrA
+# Preview: https://youtu.be/P2aWIuwqIrA
 
 Contact me for Support, Custom Scripts & More:
 Personal Discord: bwobrown
