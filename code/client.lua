@@ -131,3 +131,22 @@ function AddTarget(entity)
         exports.ox_target:addLocalEntity(entity, options)
     end
 end
+
+Citizen.CreateThread(function()
+    local blipsettings = config.blip_settings 
+    if blipsettings.enable then 
+        for _, loc in ipairs(config.washlocations) do
+            local blip = AddBlipForCoord(loc.coords.x, loc.coords.y, loc.coords.z)
+            SetBlipSprite(blip, blipsettings.sprite)
+            SetBlipColour(blip, blipsettings.color)
+            SetBlipDisplay(blip, 4)
+            SetBlipAlpha(blip, 250)
+            SetBlipScale(blip, blipsettings.scale)
+            SetBlipAsShortRange(blip, true)
+            PulseBlip(blip)
+            BeginTextCommandSetBlipName("STRING")
+            AddTextComponentString(blipsettings.label)
+            EndTextCommandSetBlipName(blip)
+        end
+    end
+end)
