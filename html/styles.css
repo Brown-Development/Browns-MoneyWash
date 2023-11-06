@@ -1,0 +1,136 @@
+body {
+    overflow: hidden;
+}
+
+@keyframes slide-up {
+    0% {top: 200%;}
+    100% {top: 50%;}
+}
+
+@keyframes slide-down {
+    0% {top: 50%;}
+    100% {top: 200%;}
+}
+
+#container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.849);
+    width: 800px;
+    height: 600px;
+    border-radius: 10px;
+    animation: slide-up 1s forwards;
+}
+
+#washingmachine {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+#washbutton {
+    position: absolute;
+    top: 60%;
+    left: 77%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 255, 0, 0.384);
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border-color: rgba(240, 248, 255, 0);
+    font-family: 'Inter', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+#washbutton:hover {
+    background-color: rgba(0, 255, 0, 0.877);
+}
+
+#moneyinput {
+    position: absolute;
+    top: 50%;
+    left: 77%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: gray;
+    border-color: rgba(240, 248, 255, 0);
+    color: rgb(255, 255, 255);
+    font-family: 'Inter', sans-serif;
+}
+
+#helper {
+    position: absolute;
+    top: 40%;
+    left: 91%;
+    transform: translate(-50%, -50%);
+    font-family: 'Inter', sans-serif;
+    width: 400px;
+    color: rgb(255, 255, 255);
+    font-size: medium;
+}
+
+#amount {
+    position: absolute;
+    top: 30%;
+    left: 77%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    font-family: 'Inter', sans-serif;
+    color: rgba(0, 255, 0, 0.384);
+    font-size: large;
+    width: 400px;
+}
+
+#exit {
+    position: absolute;
+    top: 5%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+    border-radius: 3px;
+    background-color: rgba(255, 0, 0, 0.596);
+    border-color: rgba(240, 248, 255, 0);
+    width: 40px;
+    height: 30px;
+    font-family: 'Inter', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+#exit:hover {
+    background-color: rgba(255, 0, 0, 0.938);
+
+}
+
+#washed {
+    position: absolute;
+    top: 40%;
+    left: 77%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    font-family: 'Inter', sans-serif;
+    color: rgba(0, 255, 0, 0.384);
+    font-size: large;
+    width: 400px;
+}
+
+#takebutton {
+    position: absolute;
+    top: 50%;
+    left: 77%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 255, 0, 0.384);
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border-color: rgba(240, 248, 255, 0);
+    font-family: 'Inter', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+#takebutton:hover {
+    background-color: rgba(0, 255, 0, 0.877);
+}
