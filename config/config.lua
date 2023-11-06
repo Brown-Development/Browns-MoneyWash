@@ -23,3 +23,10 @@ config.washlocations = { -- creates a targetable washing machine to wash money
     -- {coords = vector3(0, 0, 0), heading = 0}, -- add as many as you want...
 }
 
+config.blip_settings  = {
+    enable = true, -- enable or disable money wash blip (true/false)
+    sprite = 500, -- blip sprite/icon (see ref: https://docs.fivem.net/docs/game-references/blips/#blips)
+    color = 2, -- blip color (see ref: https://docs.fivem.net/docs/game-references/blips/#blip-colors)
+    scale = 0.7, -- blip scale/size (0.1 - 1.0)
+    label = 'Money Wash' -- blip label/name
+}
