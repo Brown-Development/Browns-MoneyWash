@@ -10,6 +10,10 @@ config.percentage = 70 -- the percentage of washed money you receive out of the 
 
 config.dirtymoney = {
 
+    UsingMarkedMoney = false, -- if using Marked Money (QBCore) then set this to true and ignore "DirtyMoneyItem" & "DirtyMoneyName"
+
+    MarkedMoneyName = 'markedbills', -- the name of your Marked Money (QBCore) only change if "UsingMarkedMoney" is true
+
     DirtyMoneyItem = true, -- (true/false) is dirty money an item
 
     -- if DirtyMoneyItem = false then put the account name ('cash', 'bank', 'dirtymoney', etc.) for DirtyMoneyName
