@@ -141,7 +141,11 @@ function GetMoney(source)
             else 
                 for i = 1, #item do 
                     local money = item[i]
-                    markedmoney = markedmoney + tonumber(money.info.worth) 
+                    if tonumber(money.amount) > 1 then 
+                        markedmoney = markedmoney + tonumber(money.info.worth) * tonumber(money.amount)
+                    else
+                        markedmoney = markedmoney + tonumber(money.info.worth) 
+                    end
                 end
                 return markedmoney
             end
@@ -153,7 +157,11 @@ function GetMoney(source)
             else 
                 for i = 1, #item do 
                     local money = item[i]
-                    markedmoney = markedmoney + tonumber(money.info.worth) 
+                    if tonumber(money.amount) > 1 then 
+                        markedmoney = markedmoney + tonumber(money.info.worth) * tonumber(money.amount)
+                    else
+                        markedmoney = markedmoney + tonumber(money.info.worth) 
+                    end
                 end
                 return markedmoney
             end
@@ -165,7 +173,11 @@ function GetMoney(source)
             else 
                 for i = 1, #item do 
                     local money = item[i]
-                    markedmoney = markedmoney + tonumber(money.info.worth) 
+                    if tonumber(money.amount) > 1 then 
+                        markedmoney = markedmoney + tonumber(money.info.worth) * tonumber(money.amount)
+                    else
+                        markedmoney = markedmoney + tonumber(money.info.worth) 
+                    end
                 end
                 return markedmoney
             end
@@ -177,7 +189,11 @@ function GetMoney(source)
             else 
                 for i = 1, #item do 
                     local money = item[i]
-                    markedmoney = markedmoney + tonumber(money.info.worth) 
+                    if tonumber(money.amount) > 1 then 
+                        markedmoney = markedmoney + tonumber(money.info.worth) * tonumber(money.amount)
+                    else
+                        markedmoney = markedmoney + tonumber(money.info.worth) 
+                    end 
                 end
                 return markedmoney
             end
