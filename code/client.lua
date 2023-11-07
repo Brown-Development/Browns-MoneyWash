@@ -3,7 +3,6 @@ local Callback = C_CALLBACK()
 local percentage = config.percentage
 
 RegisterNUICallback('WashMoney', function(money)
-    print(money.amount)
     Callback('wash:GetAccountBalance', function(balance, zero)
         if zero == 'notzero' then 
             if balance then 
