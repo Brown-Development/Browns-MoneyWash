@@ -2,6 +2,8 @@
 
 # If you like this script check out my tebex: https://brown-development.tebex.io/
 
+**DO NOT CHANGE THE NAME OF THIS SCRIPT OR IT WILL BREAK**
+
 # Preview: https://youtu.be/P2aWIuwqIrA
 
 Contact me for Support, Custom Scripts & More:
