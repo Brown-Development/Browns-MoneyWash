@@ -3,6 +3,7 @@ local Callback = C_CALLBACK()
 local percentage = config.percentage
 
 RegisterNUICallback('WashMoney', function(money)
+    print(money.amount)
     Callback('wash:GetAccountBalance', function(balance, zero)
         if zero == 'notzero' then 
             if balance then 
@@ -85,7 +86,8 @@ function AddTarget(entity)
                             local thisBal = bal if thisBal == nil then thisBal = 0 end
                             SendNUIMessage({
                                 start = 'UI',
-                                text = 'Washable Amount $'..tostring(thisBal)
+                                text = 'Washable Amount $'..tostring(thisBal),
+                                marked = config.dirtymoney.UsingMarkedMoney
                             })
                         end)
                     end
@@ -104,7 +106,8 @@ function AddTarget(entity)
                             local thisBal = bal if thisBal == nil then thisBal = 0 end
                             SendNUIMessage({
                                 start = 'UI',
-                                text = 'Washable Amount $'..tostring(thisBal)
+                                text = 'Washable Amount $'..tostring(thisBal),
+                                marked = config.dirtymoney.UsingMarkedMoney
                             })
                         end)
                     end
@@ -122,7 +125,8 @@ function AddTarget(entity)
                         local thisBal = bal if thisBal == nil then thisBal = 0 end
                         SendNUIMessage({
                             start = 'UI',
-                            text = 'Washable Amount $'..tostring(thisBal)
+                            text = 'Washable Amount $'..tostring(thisBal),
+                            marked = config.dirtymoney.UsingMarkedMoney
                         })
                     end)
                 end
