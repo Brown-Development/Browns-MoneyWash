@@ -16,11 +16,29 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('takebutton').innerHTML = 'Take Money'
 
     let canTake = null;
+    let markedmoney = false;
 
-    function OpenUI() {
-        $('#main').show();
-        $('#wash').show();
-        $('#take').hide();
+    function OpenUI(marked) {
+        if (!marked) {
+            document.getElementById('washbutton').innerHTML = 'Wash'
+            document.getElementById('washbutton').style.top = '60%'
+            moneyAmount.style.top = '30%'
+            $('#main').show();
+            $('#wash').show();
+            $('#take').hide();
+            $('#moneyinput').show();
+            $('#helper').show();
+        } else {
+            document.getElementById('washbutton').innerHTML = 'Wash All' 
+            document.getElementById('washbutton').style.top = '50%'
+            moneyAmount.style.top = '40%'
+            $('#main').show();
+            $('#wash').show();
+            $('#take').hide();
+            $('#moneyinput').hide();
+            $('#helper').hide();
+        }
+
     };
 
     function ShowTake() {
@@ -58,9 +76,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     
     washButton.addEventListener('click', function () {
-        $.post('http://Browns-MoneyWash/WashMoney', JSON.stringify({
-            amount: inputs.value
-        }))
+        if (!markedmoney) {
+            $.post('http://Browns-MoneyWash/WashMoney', JSON.stringify({
+                amount: inputs.value
+            }))
+        } else {
+            $.post('http://Browns-MoneyWash/WashMoney', JSON.stringify({
+                amount: parseInt(moneyAmount.innerHTML.slice(17))
+            }))
+        }
     });
 
     exitButton.addEventListener('click', function () {
@@ -104,9 +128,10 @@ document.addEventListener('DOMContentLoaded', function () {
         var message = event.data
         if (message.start === 'UI') {
             ToggleFocus(true)
-            OpenUI()
+            OpenUI(message.marked)
             inputs.value = ''
             moneyAmount.innerHTML = message.text
+            markedmoney = message.marked
         }
     });
 
