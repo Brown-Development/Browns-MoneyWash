@@ -82,6 +82,7 @@ function AddTarget(entity)
                     label = 'Wash Money', 
                     action = function()
                         Callback('wash:StartAccountBalance', function(bal)
+                            SetNuiFocus(true, true)
                             local thisBal = bal if thisBal == nil then thisBal = 0 end
                             SendNUIMessage({
                                 start = 'UI',
@@ -102,6 +103,7 @@ function AddTarget(entity)
                     label = 'Wash Money', 
                     action = function()
                         Callback('wash:StartAccountBalance', function(bal)
+                            SetNuiFocus(true, true)
                             local thisBal = bal if thisBal == nil then thisBal = 0 end
                             SendNUIMessage({
                                 start = 'UI',
@@ -121,6 +123,7 @@ function AddTarget(entity)
                 label = 'Wash Money',
                 onSelect = function()
                     Callback('wash:StartAccountBalance', function(bal)
+                        SetNuiFocus(true, true)
                         local thisBal = bal if thisBal == nil then thisBal = 0 end
                         SendNUIMessage({
                             start = 'UI',
