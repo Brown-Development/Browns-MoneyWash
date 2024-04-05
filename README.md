@@ -2,7 +2,7 @@
 
 # If you like this script check out my tebex: https://brown-development.tebex.io/
 
-**DO NOT CHANGE THE NAME OF THIS SCRIPT OR IT WILL BREAK**
+**MAKE SURE THE SCRIPT IS NAMED Browns-MoneyWash NOT Browns-MoneyWash-main**
 
 # Preview: https://youtu.be/P2aWIuwqIrA
 
